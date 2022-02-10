@@ -1,18 +1,27 @@
-const form = document.querySelector("form");
+const a = 1;
+const b = "string";
+const c = true;
+const d = null;
+let e;
+const f = ["what", "is", "my", "type"];
 
-function consoleLog(event) {
-  event.preventDefault();
+const numberBox = document.getElementById("number");
+const stringBox = document.getElementById("string");
+const booleanBox = document.getElementById("boolean");
+const nullBox = document.getElementById("null");
+const undefinedBox = document.getElementById("undefined");
+const objectBox = document.getElementById("object");
 
-  const num = document.querySelector("input").value;
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+console.log(d);
+console.log(typeof e);
+console.log(typeof f);
 
-  if(isNaN(Number(num))) {
-    alert("빈칸에는 숫자만 써 주세요.");
-  } else {
-    for(let i = 1; i <= Number(num); i++) {
-      console.log(i);
-    };
-  };
-};
-
-
-form.addEventListener("submit", consoleLog);
+numberBox.querySelector(".name").innerText = `${(typeof a)}`;
+stringBox.querySelector(".name").innerText = `${(typeof b)}`;
+booleanBox.querySelector(".name").innerText = `${(typeof c)}`;
+nullBox.querySelector(".name").innerText = `${d}`;
+undefinedBox.querySelector(".name").innerText = `${(typeof e)}`;
+objectBox.querySelector(".name").innerText = `${(typeof f)}`;
