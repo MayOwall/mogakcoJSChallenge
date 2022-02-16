@@ -5,62 +5,85 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 50rem;
-  padding: 3rem 2rem;
+  padding: 3rem;
+  background: black;
 }
-header {
-  padding: 1rem;
-  text-align: center;
-}
-#title {
-  padding: 0.5rem;
-  font-size: 2rem;
-  font-weight: 900;
-}
-.cf {
-  color: lightgray;
-  font-size: 0.8rem;
-}
-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-around;
-  width: 100%;
-  height: 40rem;
-}
-section .box {
-  width: 30%;
-  height: 15rem;
-  padding: 1rem;
-  border: 1px solid gray;
-  border-radius: 0.5rem;
-  overflow: auto;
-}
-section summary {
-  padding-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-summary span {
-  color: lightgray;
-}
-details .name {
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-details .explains {
-  color:  gray;
-  font-size: 1.2rem;
-}
-details .cf {
-  padding-top: 1rem;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  height: 3rem;
-  color: lightgray;
-}
+  header {
+    padding: 2rem;
+    text-align: center;
+  }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: white;
+    }
+    header h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: gray;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 44rem;
+      height: 30rem;
+      padding: 5rem 6rem 0 6rem;
+      background-color: rgb(22, 22, 22);
+      border-radius: 5rem;
+      box-shadow: 0 3px 10px rgb(70, 70, 70);
+    }
+    section #question {
+      color: lightgray;
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-align: center;
+      text-shadow: 1px 1px 5px gray;
+    }
+    section #answer {
+      width: 100%;
+      height: 10rem;
+      margin: 2rem;
+      padding: 2.5rem 0 3.5rem 0;
+      border: 3px dashed white;
+      border-radius: 4rem;
+      color: rgba(22, 22, 22);
+      font-size: 4rem;
+      font-weight: 900;
+      text-align: center;
+    }
+    section #play {
+      width: 10rem;
+      height: 3rem;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1.2rem;
+    }
+    section #play:active {
+      background-color: gray;
+      box-shadow: 2px 1px 3px black inset;
+    }
+    section #reset {
+      display: none;
+      width: 5rem;
+      height: 2rem;
+      margin: 0.3rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+    }
+    footer {
+      padding: 2rem;
+    }
+  footer button {
+    margin: 0;
+    border: none;
+    border-radius: 0.5rem;
+    background: none;
+    color: rgb(43, 43, 43);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  footer button:active {
+    background-color: rgb(22, 22, 22);
+  }

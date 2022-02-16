@@ -4,69 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모각코 JS 스터딩 5일차</title>
+  <title>모각코 JS 스터딩 8일차</title>
   <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
   <header>
-    <div id="title">변수 타입 맞추기</div>
-    <div id="quiz">다음 설명을 보고 변수의 타입을 맞춰보세요.</div>
-    <div class="cf">(변수를 누르면 정답이 보여요!)</div>
+    <h1>Display</h1>
+    <h2>Mogakco JS Challenge</h2>
+    <h2>DAY 8</h2>
   </header>
   <section>
-    <div id="number" class="box">
-      <details>
-        <summary>1</summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">정수와 실수 둘 다를 포함하는 타입이에요.<br>JS는 정수와 실수를 따로 구분하지 않아요.</div>
-        <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
-    <div id="string" class="box">
-      <details>
-        <summary>"what is my type"</summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">JS에서 큰따옴표("")나 작은따옴표('')로 둘러싸인 문자의 집합을 문자열이라고 해요.<br>큰따옴표와 작은따옴표는 항상 짝을 맞춰줘야 해요!</div>
-        <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
-    <div id="boolean" class="box">
-      <details>
-        <summary>true <span>or</span> false</summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">불리언이란 참과 거짓을 표현하는 타입이에요.<br>
-          javascript 에서 불리언 값은 true와 false를 통해 사용할 수 있죠!</div>
-          <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
-    <div id="null" class="box">
-      <details>
-        <summary>" "</summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">null이란 '값' 이 정해지지 않은 것을 의미해요.<br>undefined과 차이점을 유의하세요!</div>
-        <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
-    <div id="undefined" class="box">
-      <details>
-        <summary><span>none</span></summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">undefined란 '타입'이 정해지지 않은 것을 의미해요.<br>null과의 차이점을 유의하세요!</div>
-        <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
-    <div id="object" class="box">
-      <details>
-        <summary>["what", "is", "my", "type"]</summary>
-        <div class="name">변수 타입</div>
-        <div class="explains">JS에서 위의 다른 타입을 제외하고는 모두 object라고 할 수 있죠! object는 키(key)를 통해 그 값(value)을 불러올 수 있는 타입이랍니다.</div>
-        <div class="cf">출처 : 코드메이트_WEB 메이트 자바스크립트</div>
-      </details>
-    </div>
+    <div id="question">WHO AM I?</div>
+    <div id="answer">pixartive</div>
+    <button id="play" onclick="showAnswer()">show my name</button>
+    <button id="reset" onclick="resetAnswer()">reset</button>
   </section>
   <footer>
-    <div>모각코 자바스크립트 챌린지 5일차</div>
-    <div>madeby.Owall</div>
+    <button onclick="easterEgg()">madeby Owall</button>
   </footer>
   <script src="JS/index.js"></script>
 </body>

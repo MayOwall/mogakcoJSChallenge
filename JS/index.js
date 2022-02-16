@@ -1,27 +1,37 @@
-const a = 1;
-const b = "string";
-const c = true;
-const d = null;
-let e;
-const f = ["what", "is", "my", "type"];
+const name = 'pixartive';
+const color = ['#3E00FD', '#00FDFD', '#FFFF32', '#CEFF03', '#F82888', '#E30303'];
+let i = 1;
+const answer = document.getElementById("answer");
+const button1 = document.getElementById("play");
+const button2 = document.getElementById("reset");
 
-const numberBox = document.getElementById("number");
-const stringBox = document.getElementById("string");
-const booleanBox = document.getElementById("boolean");
-const nullBox = document.getElementById("null");
-const undefinedBox = document.getElementById("undefined");
-const objectBox = document.getElementById("object");
 
-console.log(typeof a);
-console.log(typeof b);
-console.log(typeof c);
-console.log(d);
-console.log(typeof e);
-console.log(typeof f);
 
-numberBox.querySelector(".name").innerText = `${(typeof a)}`;
-stringBox.querySelector(".name").innerText = `${(typeof b)}`;
-booleanBox.querySelector(".name").innerText = `${(typeof c)}`;
-nullBox.querySelector(".name").innerText = `${d}`;
-undefinedBox.querySelector(".name").innerText = `${(typeof e)}`;
-objectBox.querySelector(".name").innerText = `${(typeof f)}`;
+function showAnswer() {
+  answer.innerText = name.substr(0, i);
+  answer.style.color = color[Math.floor(Math.random() * 6)];
+  i++;
+  if(i === 10) {
+    button1.innerText = `That's my name!`;
+    button1.disabled = true;
+    button2.style.display = 'block';
+  }
+}
+
+function resetAnswer() {
+  answer.innerText = '';
+  i = 1;
+  button1.innerText =  `show my name`;
+  button1.style.width = `10rem`;
+  button1.disabled = false;
+  button2.style.display = `none`;
+};
+
+function easterEgg() {
+  answer.innerText = `🎉 Owall 🎉`;
+  answer.style.color = `white`;
+  button1.innerText = `You got my real name  👍`;
+  button1.style.width = `15rem`;
+  button1.disabled = true;
+  button2.style.display = `block`;
+}
