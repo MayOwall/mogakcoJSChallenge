@@ -1,52 +1,37 @@
-/*
-타이머를 다시 만들어보자~~
-*/
+const name = 'pixartive';
+const color = ['#3E00FD', '#00FDFD', '#FFFF32', '#CEFF03', '#F82888', '#E30303'];
+let i = 0;
+const answer = document.getElementById("answer");
+const button1 = document.getElementById("play");
+const button2 = document.getElementById("reset");
 
 
-//1. 시간을 계산할 함수 짜기
 
-//2. 시간을 패널에 표시할 함수 짜기.
+function showAnswer() {
+  answer.innerText = name.substr(0, i);
+  answer.style.color = color[Math.floor(Math.random() * 6)];
+  if(i === 9) {
+    button1.innerText = `That's my name!`;
+    button1.disabled = true;
+    button2.style.display = 'block';
+  }
+  i++;
+}
 
-//3. start, stop, reset에 적용할 함수 짜기.
-
-//4. html dom 요소 불러오기
-
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
-let t;
-
-function tick() {
-  seconds++;
-  if(seconds === 60) {
-    minutes++;
-    seconds = 0;
-    if(minutes === 60) {
-      hours++;
-      minutes = 0;
-    };
-  };
+function resetAnswer() {
+  answer.innerText = '';
+  i = 1;
+  button1.innerText =  `show my name`;
+  button1.style.width = `10rem`;
+  button1.disabled = false;
+  button2.style.display = `none`;
 };
 
-const timePannel = document.getElementById("time-panel");
-
-function timeWrite() {
-  tick();
-  timePannel.innerText = `${String(hours).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(seconds).padStart(2, "0")}`;
-  timerStart();
-};
-
-function timerStart() {
-  t = setTimeout(timeWrite, 1000);
-  document.getElementById("start").disabled = true;
-};
-
-function timerStop() {
-  clearTimeout(t);
-  document.getElementById("start").disabled = false;
-};
-
-function timerReset() {
-  timePannel.innerText = `00 : 00 : 00`;
-  hours = 0; minites = 0; seconds = 0;
-};
+function easterEgg() {
+  answer.innerText = `🎉 Owall 🎉`;
+  answer.style.color = `white`;
+  button1.innerText = `You got my real name  👍`;
+  button1.style.width = `15rem`;
+  button1.disabled = true;
+  button2.style.display = `block`;
+}

@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모각코 JS 스터딩 8일차</title>
+  <title>모각코 JS 스터딩 9일차</title>
   <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
   <header>
-    <h1>Display</h1>
+    <h1>Movie Information</h1>
     <h2>Mogakco JS Challenge</h2>
-    <h2>DAY 8</h2>
+    <h2>DAY 9</h2>
   </header>
   <section>
-    <div id="question">WHO AM I?</div>
-    <div id="answer">pixartive</div>
-    <button id="play" onclick="showAnswer()">show my name</button>
-    <button id="reset" onclick="resetAnswer()">reset</button>
+   <article id="article1">
+     <img src="IMG/castlePoster.jpg">
+     <div id="info">
+       <div id="info-name"></div>
+       <div id="info-year"></div>
+       <div id="info-story"></div>
+     </div>
+   </article>
+   <article id="article2">
+     <button onclick="button1()">MY NEIGHBOR<br>TOTORO</button>
+     <button onclick="button2()">SPIRITED<br>AWAY</button>
+     <button onclick="button3()">MONONOKE<br>HIME</button>
+     <button onclick="button4()">CASTLE<br>IN THE SKY</button>
+     <div>Owall's Movie list</div>
+   </article>
   </section>
   <footer>
-    <button onclick="easterEgg()">madeby Owall</button>
+    <button>madeby Owall</button>
   </footer>
   <script src="JS/index.js"></script>
 </body>
