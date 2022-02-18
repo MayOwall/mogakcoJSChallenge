@@ -1,37 +1,28 @@
-const name = 'pixartive';
-const color = ['#3E00FD', '#00FDFD', '#FFFF32', '#CEFF03', '#F82888', '#E30303'];
-let i = 1;
-const answer = document.getElementById("answer");
-const button1 = document.getElementById("play");
-const button2 = document.getElementById("reset");
+/*
+이벤트 : 사용자의 행동, 웹상의 변화.
+이벤트 생성 : 이벤트에 따른 웹의 반응.
+이벤트와 이벤트 연결방법 :
+  - HTML에 직접 연결(onclick 등)
+  유지보수에 어려우므로 직접 연결은 그다지 추천되지 않음.
+  - JS에서 작성 후 HTML에 연결(addEventListener 등)
 
+다중 이벤트를 순차대로 확인하기위한 콜백 :
+  setTimeout(함수, 시간) : 시간만큼 지연되여 함수가 실행됨.
+*/
 
+const button = document.querySelector("button");
 
-function showAnswer() {
-  answer.innerText = name.substr(0, i);
-  answer.style.color = color[Math.floor(Math.random() * 6)];
-  i++;
-  if(i === 10) {
-    button1.innerText = `That's my name!`;
-    button1.disabled = true;
-    button2.style.display = 'block';
-  }
-}
-
-function resetAnswer() {
-  answer.innerText = '';
-  i = 1;
-  button1.innerText =  `show my name`;
-  button1.style.width = `10rem`;
-  button1.disabled = false;
-  button2.style.display = `none`;
+function write() {
+  const string = document.querySelector("div:first-of-type");
+  const phoneNum = document.querySelector("div:nth-of-type(2)");
+  
+  string.style.display = `block`;
+  phoneNum.style.display = `block`;
+  button.style.display = `none`;
 };
 
-function easterEgg() {
-  answer.innerText = `🎉 Owall 🎉`;
-  answer.style.color = `white`;
-  button1.innerText = `You got my real name  👍`;
-  button1.style.width = `15rem`;
-  button1.disabled = true;
-  button2.style.display = `block`;
-}
+function call() {
+  setTimeout(write, 2000);
+};
+
+button.addEventListener("click", call);
