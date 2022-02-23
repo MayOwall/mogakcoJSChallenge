@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
-  <header>I'm header</header>
+  <header>
+    <div id="nightmode-button">NIGHTMODE
+      <button onclick="nightmodeOn()">On</button>
+    </div>
+  </header>
   <section>
     <article id="chatbot-box">
       <div id="chatbot-info">
@@ -17,17 +21,38 @@
     </article>
     <article id="chat-box">
       <div id="chat">
-        <div class="display"></div>
+        <div id="chat-display">
+          <div id="chatbot-chat">
+            <img class="profile" src="img/may.png">
+            <div id="chatbot-chat-box">
+              <div class="chat"></div>
+              <div class="time">오전 01:17</div>
+            </div>
+          </div>
+          <div id="user-chat">
+            <div class="chat">오월이에게 인사 해 보세요!</div>
+            <div class="time">오전 01:16</div>
+          </div>
+        </div>
         <form>
           <input type="text">
           <input type="submit" value="✉️">
         </form>
       </div>
     </article>
-    <article id="todo-box"></article>
+    <article id="todo-box">
+      <h3>오월이가 알아들을 수 있는 단어들!</h3>
+      <ul>
+        <li>'안녕'을 포함한 인사!</li>
+        <li>'반가워, 반가웡' 등의 말!</li>
+        <li>'고마워, 고마웡!' 등의 말!</li>
+        <li>나이트모드 켜줘/꺼줘!</li>
+      </ul>
+    </article>
   </section>
 
   <footer>madeby Owall</footer>
   <script src="JS/chatbox.js"></script>
+  <script src="JS/nightmode.js"></script>
 </body>
 </html>
